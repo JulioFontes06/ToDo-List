@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+
 
   const ipt = document.getElementById("toDoTaskCadaster");
   const toDo = document.getElementById("toDo");
@@ -266,4 +266,4 @@ document.addEventListener("DOMContentLoaded", () => {
     abstractPlan.done.splice(index, 1);
     abstractPlan.todo.push(value);
   }
-});
+
