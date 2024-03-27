@@ -15,7 +15,10 @@ let toDoTaskNumber =
   abstractPlan.doing.length +
   abstractPlan.done.length;
 
-startToDoList();
+  window.onload = function() {
+    startToDoList();
+  }
+
 function addTask() {
   if (ipt.value) {
     createLi(ipt.value);
