@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    background-color: #232323;
+}
+
+.form {
+    display: flex;
+    width: 100%;
+    margin: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ipt {
+    width: 70%;
+    padding: 30px;
+    border-radius: 10px 0 0 10px;
+}
+
+.btn {
+    width: 100px;
+    border-radius: 0 10px 10px 0;
+}
+
+.ipt, .btn {
+    background-color: #888;
+    padding: 5px;
+    height: 40px;
+}
+
+.toDoListConteiner {
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+}
+
+.tasks {
+    border: solid 2px #fff;
+    width: 95%;
+    height: fit-content;
+    color: #fff;
+    margin: 30px 20px 10px;
+    padding: 10px;
+}
+
+.task {
+    padding: 8px;
+    margin: 10px 0;
+    background-color: #888;
+    display: flex;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+} 
+
+img {
+    border-radius: 10px;
+    padding: 3px;
+}
+
+img:hover {
+    background-color: #fff;
+}
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>To do list of day</title>
+</head>
+<body>
+    <h1>To do list</h1>
+    <div action="#" class="form">
+        <input type="text" name="toDoTaskCadaster" id="toDoTaskCadaster" class="ipt">
+        <button type="submit" class="btn" onclick="addTask()">Add</button>
+    </div>
+    <section class="toDoListConteiner">
+        <section class="tasks toDo">
+            <h2>A fazer</h2>
+            <ul class="todoTasks" id="toDo">
+            </ul>
+        </section>
+        <section class="tasks doing">
+            <h2>Fazendo</h2>
+            <ul class="doingTasks" id="doing">
+            </ul>
+        </section>
+        <section class="tasks done">
+            <h2>Pronto</h2>
+            <ul class="doneTasks" id="done">
+            </ul>
+        </section>
+    </section>
+    <script src="./js/script.js"></script>
+</body>
+</html>
