@@ -15,9 +15,10 @@ let toDoTaskNumber =
   abstractPlan.doing.length +
   abstractPlan.done.length;
 
-  window.onload = function() {
+  document.addEventListener("DOMContentLoaded", () => {
     startToDoList();
-  }
+  }) 
+  
 
 function addTask() {
   if (ipt.value) {
