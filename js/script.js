@@ -13,7 +13,6 @@ let abstractPlan = {
 
 const addNewTask = () => {
   const ipt = document.getElementById("toDoTaskCadaster");
-  const toDo = document.getElementById("toDo");
   const task = document.querySelectorAll(".task");
 
   task.forEach((item) => {
@@ -25,6 +24,7 @@ const addNewTask = () => {
     console.clear();
     console.log(abstractPlan);
     display(ipt.value);
+    ipt.value = ""
   }
 };
 
@@ -60,6 +60,7 @@ const newLi = (data, content, localState) => {
 
   li.className = `task-${localState}`;
   li.innerText = content;
+  img.className = 'trash'
   img.src = "./src/trash3-fill.svg";
   img.addEventListener("click", (e) => remove(e));
   li.addEventListener('click', (e) => toggle(e))
@@ -115,6 +116,41 @@ const start = () => {
   ) {
     abstractPlan = localStorageData;
   }
+
+  const toDo = document.getElementById('toDo')
+  const doing = document.getElementById('doing')
+  const done = document.getElementById('done')
+
+  const arrowTodo = document.getElementById('arrow-todo')
+  const arrowDoing = document.getElementById('arrow-doing')
+  const arrowDone = document.getElementById('arrow-done')
+
+  arrowTodo.addEventListener('click', () => {
+    toDo.style.display = 'block'
+    doing.style.display = 'none'  
+    done.style.display = 'none'
+    arrowTodo.src = './src/arrow-up-circle.svg'
+    arrowDoing.src = './src/arrow-down-circle.svg'
+    arrowDone.src = './src/arrow-down-circle.svg'
+  })
+
+  arrowDoing.addEventListener('click', () => {
+    toDo.style.display = 'none'
+    doing.style.display = 'block'  
+    done.style.display = 'none'
+    arrowTodo.src = './src/arrow-down-circle.svg'
+    arrowDoing.src = './src/arrow-up-circle.svg'
+    arrowDone.src = './src/arrow-down-circle.svg'
+  })
+
+  arrowDone.addEventListener('click', () => {
+    toDo.style.display = 'none'
+    doing.style.display = 'none'  
+    done.style.display = 'block'
+    arrowTodo.src = './src/arrow-down-circle.svg'
+    arrowDoing.src = './src/arrow-down-circle.svg'
+    arrowDone.src = './src/arrow-up-circle.svg'
+  })
 };
 
 const updateLocalStorage = () => {
