@@ -57,7 +57,7 @@ body {
     border-radius: 10px;
 }
 
-.task {
+.task-todo, .task-doing, .task-done {
     padding: 8px;
     margin: 10px 0;
     background-color: #888;
