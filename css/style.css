@@ -87,7 +87,7 @@ li {
     background-color: #fff;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 620px) {
     .toDoListConteiner {
         display: flex;
         flex-direction: column;
@@ -116,12 +116,5 @@ li {
     #done{
         display: none;
     }
-
-    /* .doing {
-        display: none;
-    } 
-    .done {
-        display: none;
-    } */
 }
 
